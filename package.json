@@ -1,0 +1,22 @@
+{
+  "name": "-sitemoda",
+  "version": "1.0.0",
+  "description": "Site dedicat istoriei modei și tendințelor actuale, oferind sfaturi de styling și inspirație",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modă",
+    "tendințe",
+    "stil",
+    "vestimentar",
+    "designeri celebri"
+  ],
+  "author": "Mogîldea Raluca",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

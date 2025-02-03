@@ -1,0 +1,120 @@
+#banner,
+#watermark {
+    display: none;
+}
+
+@media print {
+    #banner {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        border: 4px double black;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Ascundere elemente media și linkul către începutul paginii */
+    img,
+    figcaption,
+    #video,
+    #link-top,
+    #descarcari {
+        display: none !important;
+    }
+
+    /* Afișarea gridului ca block */
+    #grid-pagina {
+        display: block;
+    }
+
+    /* Linkurile ca text normal */
+    a {
+        color: #5D4037 !important;
+        text-decoration: none !important;
+    }
+
+    /* Heading de nivel 1 centrat */
+    h1 {
+        text-align: center;
+        margin-top: 50%;
+        page-break-after: always;
+        margin-left: 1cm;
+    }
+
+    /* Meniu afișat ca listă neordonată */
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li ul {
+        margin-left: 20px;
+    }
+
+    /* Page break după meniu */
+    nav+main {
+        page-break-before: always;
+    }
+
+    /* Page break înainte de footer */
+    footer {
+        page-break-before: always;
+    }
+
+    /* Watermark pe fiecare pagină */
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        /* Lățimea watermark-ului este 60% din lățimea paginii */
+        height: 10%;
+        /* Înălțimea watermark-ului este 10% din înălțimea paginii */
+        text-align: center;
+        font-size: 3em;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.3);
+        /* Opacitate aplicată pe culoarea textului */
+        z-index: 9999;
+        /* Asigură că watermark-ul va fi deasupra altor elemente */
+        pointer-events: none;
+        /* Nu afectează interacțiunile cu conținutul */
+        white-space: pre-line;
+        /* Permite ca numele să fie pe două rânduri */
+    }
+
+    /* Margini pentru paginile din stânga și dreapta */
+    @page {
+        size: A4;
+        margin-bottom: 2cm;
+        margin-top: 2cm;
+        background: none;
+        position: relative;
+    }
+
+    @page: left {
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+
+    @page: right {
+        margin-right: 2cm;
+        margin-left: 1cm;
+    }
+
+    #adresa,
+    #styles,
+    #runways {
+        page-break-after: always;
+    }
+}
