@@ -1,0 +1,23 @@
+# Ignora Windows system files
+AppData/
+NTUSER.DAT*
+OneDrive/
+Documents/
+Downloads/
+Favorites/
+Music/
+Pictures/
+Videos/
+
+# Ignora VSCode settings
+.vscode/
+
+# Ignora Node.js 
+node_modules/
+temp/
+backup/
+
+# Ignora Python 
+__pycache__/
+*.pyc
+venv/
