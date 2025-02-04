@@ -1,0 +1,414 @@
+html {
+    --dimensiune-text: 17px;
+    font-size: var(--dimensiune-text);
+    transition: font-size 300ms linear;
+}
+
+:root {
+    --culoare-accent: #A67B5B;
+    /* Crem maroniu */
+    --culoare-background: #F5EDE0;
+    /* Crem deschis */
+    --culoare-text: #5D4037;
+    /* Maro */
+    --culoare-highlight: #D7B8A4;
+    /* Nude */
+    --culoare-border: #8B5E3C;
+    /* Maro deschis */
+    --culoare-title: #FFFFFF;
+    --culoare-footer: #bdb5af;
+    --culoare-link: #0077cc;
+    --culoare-link-vizitat: #8a2be2;
+    --culoare-linkfrumos: #8FE3A7;
+    --spatiere-pagina-lg: 150px;
+    --spatiere-pagina-md: 80px;
+    --spatiere-pagina-sm: 20px;
+    --padding-sectiune: 20px;
+    --radius-box: 10px;
+    --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --gap-grid-lg: 20px;
+    --gap-grid-md: 15px;
+    --gap-grid-sm: 10px;
+}
+
+
+/* Stiluri generale */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--culoare-background);
+    color: var(--culoare-text);
+    padding-left: var(--spatiere-pagina-lg);
+    padding-right: var(--spatiere-pagina-lg);
+    line-height: 1.6;
+    margin: 0;
+    transition: padding 300ms ease;
+    background-attachment: fixed;
+    background-size: cover;
+    --spatiere--pagina: 150px;
+}
+
+header {
+    background-color: var(--culoare-accent);
+    color: var(--culoare-background);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: var(--radius-box);
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    color: var(--culoare-title);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+section {
+    padding: var(--padding-sectiune);
+    border-bottom: 1px solid var(--culoare-border);
+    background-color: var(--culoare-highlight);
+    border-radius: var(--radius-box);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h2,
+h3,
+h4 {
+    color: var(--culoare-accent);
+}
+
+/*Link frumos*/
+/* Linkuri vizitate */
+a:visited {
+    color: var(--culoare-link-vizitat);
+}
+
+/* Linkuri externe */
+a[href^="http"]::before {
+    content: "⮳";
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    color: var(--culoare-link);
+    transition: color 0.3s ease-in-out;
+}
+
+a[href^="http"]:hover::before {
+    color: var(--culoare-text);
+}
+
+/* Linkuri interne din conținutul paginii */
+main a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: var(--culoare-link);
+    text-decoration: none;
+    overflow: hidden;
+    transition: background-size 0.5s ease-in-out;
+    background-image: radial-gradient(circle, var(--culoare-linkfrumos) 0%, var(--culoare-linkfrumos) 40%, transparent 80%, transparent 100%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 0% 0%;
+    border-radius: 50%;
+}
+
+main a:hover {
+    background-size: 150% 150%;
+}
+
+/* Grid si spatiere */
+#grid-pagina {
+    display: grid;
+    grid-template-areas:
+        "z-home z-home z-home z-home"
+        "z-orar z-orar z-history z-history"
+        "z-lista z-date z-history z-history"
+        "z-trends z-calendar z-site z-site";
+    gap: var(--gap-grid-lg);
+    row-gap: var(--gap-grid-lg);
+    transition: gap 300ms ease;
+}
+
+#grid-pagina>* {
+    outline: 1px solid black;
+    margin: 0;
+    padding: 15px;
+    border-radius: var(--radius-box);
+    box-shadow: var(--box-shadow);
+}
+
+/* Zone grid */
+#home {
+    grid-area: z-home;
+}
+
+#orar {
+    grid-area: z-orar;
+}
+
+#calendar {
+    grid-area: z-calendar;
+}
+
+#trends {
+    grid-area: z-trends;
+}
+
+#lista {
+    grid-area: z-lista;
+}
+
+#date {
+    grid-area: z-date;
+}
+
+#site {
+    grid-area: z-site;
+}
+
+#history {
+    grid-area: z-history;
+}
+
+footer {
+    background-color: var(--culoare-footer);
+    color: var(--culoare-text);
+    text-align: align;
+    padding: 1rem;
+    border-radius: var(--radius-box);
+    box-shadow: var(--box-shadow);
+    margin-top: 20px;
+}
+
+#adresa,
+#drepturi,
+#banner,
+.watermark {
+    text-align: center;
+}
+
+/* Elemente media */
+img,
+video {
+    width: 100%;
+    max-width: 600px;
+    min-width: 150px;
+    height: auto;
+    border-radius: var(--radius-box);
+}
+
+
+
+@media (max-width: 700px) {
+
+    * {
+        animation: none !important;
+    }
+}
+
+/*Taburi-iframe*/
+.container-iframe {
+    display: flex;
+    flex-direction: row;
+    /* Aliniază iframe-ul și butoanele pe orizontală */
+    align-items: flex-start;
+    /* Asigură alinierea sus */
+    gap: 20px;
+    /* Spațiu între iframe și butoane */
+    max-width: 100%;
+}
+
+.container-iframe iframe {
+    width: 560px;
+    height: 315px;
+    border: 2px solid #ddd;
+}
+
+.taburi-iframe {
+    display: flex;
+    flex-direction: column;
+    /* Butoanele pe verticală */
+    gap: 15px;
+    /* Spațiu între butoane */
+}
+
+.taburi-iframe>a {
+    width: 200px;
+    height: 70px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #5D4037;
+    color: #FFFFFF;
+    background-color: #8B5E3C;
+    border-radius: 10px;
+    transition: all 0.5s linear;
+    text-decoration: none;
+}
+
+.taburi-iframe>a:hover,
+.taburi-iframe>a:focus {
+    background-color: #6D4C41;
+    color: #FFF;
+    transform: scale(1.05);
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+/* link top */
+#link-top {
+    position: fixed;
+    bottom: 0.3em;
+    opacity: 0.5;
+    right: 0.3em;
+    width: 3rem;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 0.2rem #8B4513;
+    /* Cercul */
+    background: linear-gradient(45deg, #8B4513, #D2B48C);
+    /* Gradient pentru fundal */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Shadow intern */
+    transition: all 0.5s ease;
+    /* Tranzitie pentru efectele hover */
+    opacity: 0.7;
+    filter: blur(3px);
+    /* Efect de blur la început */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#link-top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.2rem dashed #52290b;
+    border-style: dashed;
+    /* 5px to rem */
+    border-radius: inherit;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+#link-top:hover {
+    opacity: 1;
+    filter: blur(0);
+
+}
+
+#link-top:hover::after {
+    animation: spin 0.75s linear;
+}
+
+#link-top:not(:hover)::after {
+    animation: border-reverse 0.75s linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes border-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/*Buton top*/
+#sageata {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+
+}
+
+#sageata::before,
+#sageata::after {
+    position: absolute;
+    width: 0.7rem;
+    height: 0.1rem;
+    background-color: #FFFFFF;
+    border-radius: 0.1rem;
+    filter: blur(0);
+
+}
+
+#sageata::before {
+    top: 0.1rem;
+    left: -0.6rem;
+    transform: rotate(-30deg);
+    filter: blur(2px);
+
+}
+
+#sageata::after {
+    top: 0.1rem;
+    right: -0.6rem;
+    transform: rotate(30deg);
+
+}
+
+/*video-vtt*/
+video {
+    width: 100%;
+    min-width: 300px;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stilizarea textului din trackuri */
+video::cue {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    /* Gradient pentru fundal */
+    color: transparent;
+    /* Text transparent */
+    -webkit-background-clip: text;
+    /* Aplică gradientul pe text */
+    background-clip: text;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Afișează textul pe 2 rânduri */
+video::cue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

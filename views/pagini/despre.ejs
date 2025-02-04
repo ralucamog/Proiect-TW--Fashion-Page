@@ -1,0 +1,18 @@
+<%- include("../fragmente/head.ejs") %>
+    <%- include("../fragmente/nav.ejs") %>
+        <section id="home">
+            <h2>Bine ai venit!</h2><span class="fa-regular fa-heart"></span>
+            <p>Scopul acestui site este de informat cititorul despre ultimele tendințe de modă, ultimile noutăți de la
+                designeri celebrii și de a prezenta cum sunt făcute unele haine, în principal de a educa și inspira.
+            </p>
+            <figure>
+                <picture>
+                    <source srcset="/resurse/imagini/trendurimic.jpg" media="(max-width: 700px)">
+                    <source srcset="/resurse/imagini/trendurimediu.jpg" media="(max-width: 1000px)">
+                    <img class="model" src="/resurse/imagini/trenduri.jpg" alt="Tendințe actuale în modă">
+                </picture>
+                <figcaption>O privire asupra celor mai noi tendințe în <b>modă</b>.</figcaption>
+            </figure>
+        </section>
+
+        <%- include("../fragmente/footer.ejs") %>

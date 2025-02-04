@@ -1,0 +1,45 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default": {
+        "titlu": "Eroare",
+        "text": "A survenit o eroare.",
+        "imagine": "interzis.png"
+    },
+    "info_erori": [
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "404",
+            "text": "Nu exista",
+            "imagine": "lupa.png"
+        },
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "403",
+            "text": "Ai greșit ruta.",
+            "imagine": "forbidden.png"
+        },
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "400",
+            "text": "Cerere gresita",
+            "imagine": "bad_request.jpg"
+        },
+        {
+            "identificator": 500,
+            "status": true,
+            "titlu": "500",
+            "text": "Nu ai acces",
+            "imagine": "interzis.png"
+        },
+        {
+            "identificator": 1,
+            "status": false,
+            "titlu": "Site in mentenanta",
+            "text": "Eroare interna",
+            "imagine": "interzis.png"
+        }
+    ]
+}

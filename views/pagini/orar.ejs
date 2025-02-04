@@ -1,0 +1,44 @@
+<%- include("../fragmente/head.ejs") %>
+    <%- include("../fragmente/nav.ejs") %>
+        <section id="orar">
+            <h2>Orar cu programul de răspuns la întrebări</h2>
+            <table id="tab-orar">
+                <thead>
+                    <tr>
+                        <th>Ziua</th>
+                        <th>Interval Orar</th>
+                        <th>Tip Activitate</th>
+                        <th>Observații</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Luni</td>
+                        <td>09:00 - 12:00</td>
+                        <td>Întrebări despre evenimente</td>
+                        <td>Disponibil doar online</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 17:00</td>
+                        <td>Întrebări Generale</td>
+                        <td>Disponibil doar la telefon</td>
+                    </tr>
+                    <tr>
+                        <td>Marți</td>
+                        <td>10:00 - 15:00</td>
+                        <td colspan="2">Workshopuri Specializate</td>
+                    </tr>
+                    <tr>
+                        <td>Miercuri</td>
+                        <td>08:00 - 12:00</td>
+                        <td>Consultanță</td>
+                        <td>Prin programare telefonică</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Notă: Programul poate suferi modificări</td>
+                    </tr>
+            </table>
+        </section>
+        <%- include("../fragmente/footer.ejs") %>

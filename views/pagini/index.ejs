@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include("../fragmente/head.ejs") %>
+
+
+</head>
+
+<body>
+    <header>
+        <p><%- locals.ip %></p>
+        <h1><b>Totul despre MODĂ</b><span class="fas fa-virus fa-fw fa-spin"></span></h1>
+        <%- include("../fragmente/nav.ejs") %>
+    </header>
+    <main id="grid-pagina">
+        <section id="trends">
+            <h3>Tendințe în modă</h3>
+            <p>Află ce se poartă în acest sezon și cum să îți adaptezi garderoba.</p>
+            <ul>
+                <li>Imprimeuri de leopard</li>
+                <li>Culori neutre</li>
+                <li>Ținute oversized</li>
+            </ul>
+        </section>
+        <section id="history">
+            <h3>Istoria modei</h3>
+            <p>Descoperă modalitățile care au fost folosite pentru a crea ținute unice și stilate.</p>
+            <blockquote>"Moda e trecătoare, doar stilul rămâne neschimbat." - Coco Chanel</blockquote>
+            <section>
+                <h4>Despre trecerea de la haute couture la moda stradală</h4>
+                <p>Pentru început în industria modei, termenul <i>haute couture</i> se referă la articole
+                    vestimentare de lux, realizate manual și la comandă, iar moda stradală este acel stil ce combină
+                    funcționalitatea cu confortul, ceea ce face ca look-ul să fie original și impresionează prin
+                    forma sa simplă și relaxare.</p>
+                <p>
+                    În trecut, <s>moda stradală era urâtă de designerii de top</s><ins>moda stradală a început să
+                        fie adoptată de designerii de top datorită individualismului pe care îl aduce.</ins>.
+                    Unele dintre cele mai cunoscute case de modă cunoscute pentru abordarea modei stradale includ
+                    <abbr title="Christian Dior">Dior</abbr> și <abbr title="Alexander McQueen">McQueen</abbr>.
+                </p>
+                <q>Individualitatea va fi întotdeauna una dintre condiţiile eleganţei adevărate.</q> - Christian
+                Dior
+            </section>
+        </section>
+
+        <section id="lista">
+            <h3>Listă de utilizatori online</h3>
+            <p>Ne bucurăm să vă avem pe site:</p>
+            <ul>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+            </ul>
+        </section>
+        <section id="date">
+            <h3>Date despre utilizatori:</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+        <section id="calendar">
+            <h3>Calendar evenimente importante- Ianuarie 2025</h3>
+            <div class="calendar">
+                <!-- Header zile -->
+                <div class="header">Luni</div>
+                <div class="header">Marți</div>
+                <div class="header">Miercuri</div>
+                <div class="header">Joi</div>
+                <div class="header">Vineri</div>
+                <div class="header">Sâmbătă</div>
+                <div class="header">Duminică</div>
+
+                <!-- Zilele lunii -->
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+            </div>
+        </section>
+        <section id="site">
+            <h2>Despre site</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit iste quisquam </p>
+            <p>velit adipisci, blanditiis exercitationem accusantium delectus quam natus ab modi libero animi quae
+                explicabo dignissimos voluptates eius ea?</p>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h2>Videouri catwalk</h2>
+            <video id="video-vtt" controls poster="/resurse/imagini/poster-video.jpg" preload="metadata">
+                <source src="/resurse/video/video.mp4" type="video/mp4">
+                <source src="/resurse/video/video.webm" type="video/webm">
+                <source src="/resurse/video/video.ogv" type="video/ogg">
+                <track src="/resurse/video/subtitrari-ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                <track src="/resurse/video/subtitrari-en.vtt" kind="subtitles" srclang="en" label="English">
+                <p>Browserul tău nu suportă elementul video. Poți descărca videoclipul
+                    href="/resurse/video/video.mp4">aici</a>.</p>
+            </video>
+            <div>
+                <button onclick="changeSubtitle('ro')">Română</button>
+                <button onclick="changeSubtitle('en')">English</button>
+            </div>
+        </section>
+        <aside>
+            <h2>Resurse Recomandate</h2>
+            <p>Verifică aceste resurse pentru mai multe informații despre tendințele actuale.</p>
+            <dl id="descarcari">
+                <dt>Ghid de modă</dt>
+                <dd>În limba engleză - <a href="resurse/download/Fashion_and_Style_Reference_Guide_pdf.pdf"
+                        download>Descarcă
+                        ghidul
+                        de modă</a></dd>
+
+                <dt>Revista de modă</dt>
+                <dd>În limba engleză - <a href="https://www.vogue.com" download>Vogue</a></dd>
+
+            </dl>
+            <section id="video">
+                <h2>Videoclipuri relevante:</h2>
+
+                <div class="container-iframe">
+                    <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/39uq5YUm1Uc" target="videoFrame">Videoclip
+                            despre tendințele din modă</a>
+                        <a href="https://www.youtube.com/embed/V2bV4yRrQ6E" target="videoFrame">Videoclip
+                            despre sfaturi de modă</a>
+                    </div>
+                    <iframe title="video" name="videoFrame" width="560" height="315"
+                        src="https://www.youtube.com/embed/39uq5YUm1Uc" allowfullscreen></iframe>
+                </div>
+            </section>
+        </aside>
+        <aside>
+            <div id="runways">
+                <h3>Prezentări de modă</h3>
+                <p>Descoperă noile tendințe direct de pe podium.</p>
+                <ul>
+                    <li>Prezentări de modă</li>
+                    <li>Interviuri</li>
+                </ul>
+            </div>
+            <div id="styles">
+                <h3>Stiluri Vestimentare</h3>
+                <p>Explorează diverse stiluri vestimentare, de la casual la elegant.</p>
+                <ol>
+                    <li>Casual</li>
+                    <li>Streetwear</li>
+                    <li>Elegant</li>
+                </ol>
+                <div>
+                    <h4>Întrebări frecvente</h4>
+                    <details>
+                        <summary>Ce înseamnă <dfn>haute couture</dfn>?</summary>
+                        <p><em>Haute couture</em> este un termen francez care descrie creațiile de modă exclusiviste,
+                            realizate manual cu mare atenție la detalii.</p>
+                    </details>
+                    <details>
+                        <summary>Cum aleg ținuta potrivită pentru un eveniment?</summary>
+                        <p>Alegerea ținutei potrivite depinde de tipul evenimentului. De exemplu, pentru un eveniment
+                            formal, este recomandat un costum <strong>elegant</strong> sau o rochie de seară.</p>
+                    </details>
+                    <!--Math formula-->
+                    <details>
+                        <summary>Calcul Discount Promoțional?</summary>
+                        <section>
+                            <p>Formula pentru calcularea prețului final după aplicarea unui discount:</p>
+
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>P</mi>
+                                    <mo>=</mo>
+                                    <mi>P</mi><sub>
+                                        <mi>inițial</mi>
+                                    </sub>
+                                    <mo>&#x2212;</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>P</mi><sub>
+                                                <mi>inițial</mi>
+                                            </sub>
+                                            <mo>&#x22C5;</mo>
+                                            <mi>D</mi>
+                                        </mrow>
+                                        <mn>100</mn>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p>Unde:</p>
+                            <ul>
+                                <li><strong>P</strong> – prețul final</li>
+                                <li><strong>P<sub>inițial</sub></strong> – prețul inițial al produsului</li>
+                                <li><strong>D</strong> – procentul discountului aplicat</li>
+                            </ul>
+                        </section>
+                    </details>
+                </div>
+            </div>
+        </aside>
+        <%- include("../fragmente/footer.ejs") %>
+            <script>
+                function changeSubtitle(lang) {
+                    const video = document.getElementById('video-vtt');
+                    for (let i = 0; i < video.textTracks.length; i++) {
+                        video.textTracks[i].mode = video.textTracks[i].language === lang ? 'showing' : 'hidden';
+                    }
+                }
+            </script>
+    </footer>
+</body>
+
+</html>
