@@ -1,0 +1,72 @@
+/* Stilizare tabel */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Stilizare capul tabelului */
+thead th {
+    background-color: #512424;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+/* Stilizare celulele */
+td,
+th {
+    border: 2px solid #000000;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    /* Gri deschis pentru randurile impare */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d7e9f7;
+    /* Albastru deschis pentru randurile pare */
+}
+
+/* Efect hover */
+tbody tr:hover {
+    background-color: #512424;
+    /* Maro închis */
+    transition: background-color 0.3s ease;
+    color: #FFFFFF;
+}
+
+/* Stilizare subsol */
+tfoot td {
+    font-style: italic;
+    text-align: center;
+    background-color: #ddd;
+}
+
+/* Responsivitate */
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 700px) {
+    table {
+        border-spacing: 0px;
+        border-collapse: collapse;
+    }
+
+    tbody tr:hover {
+        background-color: inherit;
+        /* Dezactivare efect hover pe ecrane mici */
+    }
+}

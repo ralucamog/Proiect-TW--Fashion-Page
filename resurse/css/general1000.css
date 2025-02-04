@@ -1,0 +1,19 @@
+html {
+    --dimensiune-text: 14px;
+}
+
+body {
+    --spatiere--pagina: 50px;
+
+}
+
+#grid-pagina {
+    --grid-gap: 0.7143rem;
+    grid-template-areas: "z-home z-home"
+        "z-orar z-orar"
+        "z-history z-history"
+        "z-history z-history"
+        "z-lista z-date"
+        "z-trends z-calendar"
+        "z-site z-site";
+}

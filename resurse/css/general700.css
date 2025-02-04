@@ -1,0 +1,42 @@
+html {
+    --dimensiune-text: 12px;
+}
+
+body {
+    --spatiere--pagina: 0px;
+    margin: 0;
+}
+
+header,
+footer,
+#grid-pagina>* {
+    border-radius: 0;
+}
+
+.container-iframe {
+    display: none;
+}
+
+#grid-pagina {
+    --grid-gap: 0.4167rem;
+    /* 5px to rem, based on 12px root font size */
+    grid-template-areas: "zona-home"
+        "zona-orar"
+        "zona-history"
+        "zona-lista"
+        "zona-date"
+        "zona-trends"
+        "zona-calendar"
+        "zona-contact";
+
+    .table-container {
+        overflow-x: auto;
+        max-width: 35rem;
+        box-sizing: border-box;
+    }
+
+    #tab-materiale {
+        min-width: 58.3333rem;
+        /* 700px to rem, based on 12px root font size */
+    }
+}

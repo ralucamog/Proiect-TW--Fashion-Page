@@ -1,0 +1,19 @@
+nav {
+    ul.meniu {
+        >li {
+            >a {
+                font-size: 12px;
+            }
+        }
+
+        div {
+            &.text-icon {
+                display: none;
+            }
+
+            &.imag-icon {
+                display: inline-block;
+            }
+        }
+    }
+}

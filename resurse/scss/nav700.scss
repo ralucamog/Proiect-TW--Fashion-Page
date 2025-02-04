@@ -1,0 +1,21 @@
+#hamburger {
+    display: block;
+
+    img {
+        height: 2rem;
+    }
+}
+
+ul {
+    li {
+        .meniu {
+            display: none;
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+
+#ch-menu:checked+ul.meniu {
+    display: block;
+}
