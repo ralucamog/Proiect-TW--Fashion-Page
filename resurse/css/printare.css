@@ -20,7 +20,8 @@
     figcaption,
     #video,
     #link-top,
-    #descarcari {
+    #descarcari,
+    #inapoi {
         display: none !important;
     }
 
